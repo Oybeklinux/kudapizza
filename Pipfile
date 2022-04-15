@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pillow = "*"
+djangorestframework = "*"
+django-filter = "*"
+django-cors-headers = "*"
+drf-yasg = "*"
+coreapi = "*"
+gunicorn = "*"
+django-heroku = "*"
+whitenoise = "*"
+psycopg2 = "*"
+django-environ = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
