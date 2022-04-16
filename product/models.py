@@ -17,10 +17,10 @@ class Pizza(models.Model):
     image = models.TextField(null=True, blank=True)
     price = models.FloatField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
-    category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True, blank=True, related_name='pizzas')
+    category = models.ForeignKey('Category', on_delete=models.CASCADE, related_name='pizzas')
 
     def __str__(self):
-        return self.name_uz
+        return self.name_uz or self.name_ru or self.name_en
 
 
 class Category(models.Model):
@@ -31,7 +31,7 @@ class Category(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name_uz
+        return self.name_uz or self.name_ru or self.name_en
 
 
 class Settings(models.Model):
